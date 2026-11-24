@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Add Exercise{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <h1>Add an Exercise</h1>
+    <p class="text-muted">New exercises are saved to the JSON file and can show up in future weekly routines.</p>
+
+    {% if errors %}
+      <div class="alert alert-danger">
+        <strong>Please fix the following:</strong>
+        <ul class="mb-0">
+          {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <form method="post" action="{{ url_for('add_exercise') }}" class="card card-body">
+      <div class="mb-3">
+        <label for="category" class="form-label">Body part</label>
+        <select id="category" name="category" class="form-select" required>
+          <option value="" disabled {% if not form.category %}selected{% endif %}>Choose...</option>
+          {% for slug, category in categories.items() %}
+            <option value="{{ slug }}" {% if form.category == slug %}selected{% endif %}>{{ category.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Exercise name</label>
+        <input id="name" name="name" class="form-control" maxlength="60" required
+               value="{{ form.name }}" placeholder="e.g. Arnold Press">
+      </div>
+
+      <div class="mb-3">
+        <span class="form-label d-block">Equipment</span>
+        {% for equip in equipment_types %}
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="equipment" id="equip-{{ loop.index }}"
+                   value="{{ equip }}" required {% if form.equipment == equip %}checked{% endif %}>
+            <label class="form-check-label" for="equip-{{ loop.index }}">{{ equip }}</label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 mb-3">
+          <label for="sets" class="form-label">Sets</label>
+          <input id="sets" name="sets" type="number" min="1" max="10" class="form-control" required value="{{ form.sets }}">
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="reps" class="form-label">Reps</label>
+          <input id="reps" name="reps" class="form-control" maxlength="30" required
+                 value="{{ form.reps }}" placeholder="e.g. 10 or 30 sec">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">How to do it (optional)</label>
+        <textarea id="description" name="description" class="form-control" rows="3" maxlength="300">{{ form.description }}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save exercise</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

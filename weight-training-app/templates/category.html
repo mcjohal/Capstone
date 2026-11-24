@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ url_for('categories') }}">Exercises</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ category.name }}</li>
+  </ol>
+</nav>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+  <h1 class="mb-0">{{ category.name }}</h1>
+  <a class="btn btn-primary" href="{{ url_for('add_exercise', category=slug) }}">+ Add {{ category.name }} exercise</a>
+</div>
+<p class="text-muted">{{ category.description }}</p>
+
+<!-- Equipment filter -->
+<ul class="nav nav-pills mb-4">
+  <li class="nav-item">
+    <a class="nav-link {% if not equipment %}active{% endif %}" href="{{ url_for('category_detail', slug=slug) }}">All</a>
+  </li>
+  {% for equip in equipment_types %}
+    <li class="nav-item">
+      <a class="nav-link {% if equipment == equip %}active{% endif %}"
+         href="{{ url_for('category_detail', slug=slug, equipment=equip) }}">{{ equip }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if exercises %}
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    {% for ex in exercises %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="card-title">{{ ex.name }}</h5>
+              <span class="badge bg-info">{{ ex.equipment }}</span>
+            </div>
+            <p class="card-text mb-2">{{ ex.description or "No description yet." }}</p>
+            <small class="text-muted">Suggested: {{ ex.sets }} sets x {{ ex.reps }}</small>
+          </div>
+          {% if ex.custom %}
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning text-dark">Added by you</span>
+              <form method="post" action="{{ url_for('delete_exercise', slug=slug) }}"
+                    onsubmit="return confirm('Delete this exercise? This cannot be undone.');">
+                <input type="hidden" name="name" value="{{ ex.name }}">
+                <button class="btn btn-sm btn-outline-danger">Delete</button>
+              </form>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="alert alert-secondary">No {{ equipment }} exercises here yet. Why not add one?</div>
+{% endif %}
+{% endblock %}

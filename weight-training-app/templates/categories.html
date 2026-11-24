@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Exercises{% endblock %}
+
+{% block content %}
+<h1>Exercise Categories</h1>
+<p class="text-muted">Pick a body part to see its dumbbell, barbell, body weight and kettlebell exercises.</p>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  {% for slug, category in categories.items() %}
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">{{ category.name }}</h4>
+          <p class="card-text">{{ category.description }}</p>
+          {% for equip in equipment_types %}
+            {% set count = category.exercises | selectattr('equipment', 'equalto', equip) | list | length %}
+            <span class="badge bg-light text-dark border">{{ equip }}: {{ count }}</span>
+          {% endfor %}
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <small class="text-muted">{{ category.exercises | length }} exercises</small>
+          <a class="btn btn-sm btn-primary" href="{{ url_for('category_detail', slug=slug) }}">View exercises</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

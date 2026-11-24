@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+
+{% block content %}
+<h1>Workout History</h1>
+
+<div class="row g-3 mb-4 text-center">
+  <div class="col-md-4">
+    <div class="card card-body"><h2 class="mb-0">{{ total }}</h2><small class="text-muted">Exercises completed</small></div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-body"><h2 class="mb-0">{{ this_week }}</h2><small class="text-muted">Completed this week</small></div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-body"><h2 class="mb-0">{{ workout_days }}</h2><small class="text-muted">Days trained</small></div>
+  </div>
+</div>
+
+{% if by_category %}
+  <p>
+    {% for name, count in by_category | dictsort %}
+      <span class="badge bg-primary me-1">{{ name }}: {{ count }}</span>
+    {% endfor %}
+  </p>
+{% endif %}
+
+{% for day, entries in by_date.items() %}
+  <h4 class="mt-4">{{ day }}</h4>
+  <div class="table-responsive">
+    <table class="table table-hover align-middle">
+      <thead>
+        <tr><th>Exercise</th><th>Body part</th><th>Equipment</th><th>Sets x Reps</th><th>Routine</th></tr>
+      </thead>
+      <tbody>
+        {% for e in entries %}
+          <tr>
+            <td>{{ e.name }}</td>
+            <td>{{ e.category }}</td>
+            <td>{{ e.equipment }}</td>
+            <td>{{ e.sets }} x {{ e.reps }}</td>
+            <td>{{ e.day }} &middot; {{ e.routine }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  <div class="alert alert-secondary">
+    Nothing here yet. Mark exercises as done on the <a href="{{ url_for('index') }}">This Week</a> page.
+  </div>
+{% endfor %}
+{% endblock %}

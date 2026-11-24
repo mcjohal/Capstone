@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}This Week{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
+  <div>
+    <h1 class="mb-1">This Week's Workouts</h1>
+    <p class="text-muted mb-0">
+      {{ week_start.strftime('%b %d') }} &ndash; {{ week_end.strftime('%b %d, %Y') }}
+      &middot; A new set of exercises is picked every Monday.
+    </p>
+  </div>
+  <div class="text-end">
+    <strong>{{ done }} / {{ total }}</strong> exercises done
+  </div>
+</div>
+
+{% set pct = (done / total * 100) | round | int if total else 0 %}
+<div class="progress mb-4" role="progressbar" aria-label="Weekly progress" aria-valuenow="{{ pct }}" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-success" style="width: {{ pct }}%">{{ pct }}%</div>
+</div>
+
+<div class="row row-cols-1 row-cols-lg-2 g-4">
+  {% for routine in routines %}
+    {% set r = loop.index0 %}
+    {% set routine_done = routine.exercises | selectattr('completed') | list | length %}
+    <div class="col" id="routine-{{ r }}">
+      <div class="card h-100 {% if routine_done == routine.exercises | length %}border-success{% endif %}">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span><strong>{{ days[r] }}</strong> &middot; {{ routine.template }}</span>
+          <span class="badge bg-secondary">{{ routine_done }} / {{ routine.exercises | length }}</span>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          {% for ex in routine.exercises %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="{% if ex.completed %}text-decoration-line-through text-muted{% endif %}">
+                <div class="fw-bold">{{ ex.name }}</div>
+                <small>{{ ex.category }} &middot; {{ ex.equipment }} &middot; {{ ex.sets }} x {{ ex.reps }}</small>
+              </div>
+              <form method="post" action="{{ url_for('toggle_complete', routine_index=r, exercise_index=loop.index0) }}">
+                {% if ex.completed %}
+                  <button class="btn btn-sm btn-success" title="Click to undo">Done &#10003;</button>
+                {% else %}
+                  <button class="btn btn-sm btn-outline-primary">Mark done</button>
+                {% endif %}
+              </form>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="card-footer">
+          <form method="post" action="{{ url_for('replace_routine', routine_index=r) }}" class="d-flex gap-2"
+                onsubmit="return confirm('Replace this routine? Its exercises for this week will be swapped out.');">
+            <label class="visually-hidden" for="template-{{ r }}">Replace with</label>
+            <select class="form-select form-select-sm" id="template-{{ r }}" name="template" required>
+              <option value="" selected disabled>Replace with a different routine...</option>
+              {% for name in templates if name != routine.template %}
+                <option value="{{ name }}">{{ name }}</option>
+              {% endfor %}
+            </select>
+            <button class="btn btn-sm btn-outline-danger text-nowrap">Replace</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

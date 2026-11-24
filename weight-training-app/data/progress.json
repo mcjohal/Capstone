@@ -1,0 +1,215 @@
+{
+  "week": "2026-W48",
+  "routines": [
+    {
+      "template": "Push",
+      "exercises": [
+        {
+          "name": "Kettlebell Squeeze Press",
+          "category": "Chest",
+          "equipment": "Kettlebell",
+          "sets": 3,
+          "reps": "12",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Chest Dip",
+          "category": "Chest",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "10",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Dumbbell Shoulder Press",
+          "category": "Shoulders",
+          "equipment": "Dumbbell",
+          "sets": 4,
+          "reps": "10",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Wall Walk",
+          "category": "Shoulders",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "5",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Diamond Push-Up",
+          "category": "Triceps",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "12",
+          "completed": false,
+          "history_id": null
+        }
+      ]
+    },
+    {
+      "template": "Pull",
+      "exercises": [
+        {
+          "name": "Dumbbell Pullover",
+          "category": "Back",
+          "equipment": "Dumbbell",
+          "sets": 3,
+          "reps": "12",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Kettlebell Swing",
+          "category": "Back",
+          "equipment": "Kettlebell",
+          "sets": 3,
+          "reps": "15",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "One-Arm Dumbbell Row",
+          "category": "Back",
+          "equipment": "Dumbbell",
+          "sets": 3,
+          "reps": "10 each side",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Kettlebell Hammer Curl",
+          "category": "Biceps",
+          "equipment": "Kettlebell",
+          "sets": 3,
+          "reps": "10 each arm",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Isometric Towel Curl",
+          "category": "Biceps",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "30 sec",
+          "completed": false,
+          "history_id": null
+        }
+      ]
+    },
+    {
+      "template": "Legs & Abs",
+      "exercises": [
+        {
+          "name": "Barbell Back Squat",
+          "category": "Legs",
+          "equipment": "Barbell",
+          "sets": 4,
+          "reps": "8",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Dumbbell Romanian Deadlift",
+          "category": "Legs",
+          "equipment": "Dumbbell",
+          "sets": 3,
+          "reps": "12",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Bulgarian Split Squat",
+          "category": "Legs",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "10 each leg",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Plank",
+          "category": "Abdominals",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "45 sec",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Bicycle Crunch",
+          "category": "Abdominals",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "20",
+          "completed": false,
+          "history_id": null
+        }
+      ]
+    },
+    {
+      "template": "Full Body",
+      "exercises": [
+        {
+          "name": "Kettlebell Deadlift",
+          "category": "Legs",
+          "equipment": "Kettlebell",
+          "sets": 3,
+          "reps": "12",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Bodyweight Squat",
+          "category": "Legs",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "20",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Push-Up",
+          "category": "Chest",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "15",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Barbell Bent-Over Row",
+          "category": "Back",
+          "equipment": "Barbell",
+          "sets": 4,
+          "reps": "8",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Dumbbell Shoulder Press",
+          "category": "Shoulders",
+          "equipment": "Dumbbell",
+          "sets": 4,
+          "reps": "10",
+          "completed": false,
+          "history_id": null
+        },
+        {
+          "name": "Bicycle Crunch",
+          "category": "Abdominals",
+          "equipment": "Body Weight",
+          "sets": 3,
+          "reps": "20",
+          "completed": false,
+          "history_id": null
+        }
+      ]
+    }
+  ],
+  "history": []
+}

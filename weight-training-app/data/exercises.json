@@ -1,0 +1,101 @@
+{
+  "back": {
+    "name": "Back",
+    "description": "Lats, traps and rhomboids for a strong, upright posture.",
+    "exercises": [
+      {"name": "One-Arm Dumbbell Row", "equipment": "Dumbbell", "sets": 3, "reps": "10 each side", "description": "Brace one hand on a bench and pull the dumbbell to your hip."},
+      {"name": "Dumbbell Pullover", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "Lie across a bench and lower one dumbbell behind your head with straight arms."},
+      {"name": "Barbell Bent-Over Row", "equipment": "Barbell", "sets": 4, "reps": "8", "description": "Hinge at the hips with a flat back and row the bar to your lower ribs."},
+      {"name": "Deadlift", "equipment": "Barbell", "sets": 4, "reps": "6", "description": "Lift the bar from the floor by driving through your legs and keeping your back flat."},
+      {"name": "Pull-Up", "equipment": "Body Weight", "sets": 3, "reps": "8", "description": "Hang from a bar with an overhand grip and pull your chin over it."},
+      {"name": "Inverted Row", "equipment": "Body Weight", "sets": 3, "reps": "12", "description": "Hang under a low bar with straight legs and pull your chest to the bar."},
+      {"name": "Kettlebell Swing", "equipment": "Kettlebell", "sets": 3, "reps": "15", "description": "Hinge and snap your hips forward to swing the bell to chest height."},
+      {"name": "Kettlebell Gorilla Row", "equipment": "Kettlebell", "sets": 3, "reps": "10 each side", "description": "In a wide hinge, row one of two kettlebells while the other stays on the floor."}
+    ]
+  },
+  "chest": {
+    "name": "Chest",
+    "description": "Pectorals for pushing strength and upper-body size.",
+    "exercises": [
+      {"name": "Dumbbell Bench Press", "equipment": "Dumbbell", "sets": 4, "reps": "10", "description": "Lie on a flat bench and press two dumbbells up over your chest."},
+      {"name": "Incline Dumbbell Fly", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "On an incline bench, open your arms wide in an arc, then squeeze them back together."},
+      {"name": "Barbell Bench Press", "equipment": "Barbell", "sets": 4, "reps": "8", "description": "Lower the bar to mid-chest under control and press it back up."},
+      {"name": "Incline Barbell Bench Press", "equipment": "Barbell", "sets": 3, "reps": "8", "description": "Bench press on a 30-45 degree incline to target the upper chest."},
+      {"name": "Push-Up", "equipment": "Body Weight", "sets": 3, "reps": "15", "description": "Keep a straight line from head to heels and lower your chest to the floor."},
+      {"name": "Chest Dip", "equipment": "Body Weight", "sets": 3, "reps": "10", "description": "On parallel bars, lean forward slightly and lower until your shoulders are below your elbows."},
+      {"name": "Kettlebell Floor Press", "equipment": "Kettlebell", "sets": 3, "reps": "10", "description": "Lie on the floor and press two kettlebells up until your arms are straight."},
+      {"name": "Kettlebell Squeeze Press", "equipment": "Kettlebell", "sets": 3, "reps": "12", "description": "Press one kettlebell held by the horns while squeezing it hard with both hands."}
+    ]
+  },
+  "legs": {
+    "name": "Legs",
+    "description": "Quads, hamstrings, glutes and calves - your biggest muscles.",
+    "exercises": [
+      {"name": "Dumbbell Walking Lunge", "equipment": "Dumbbell", "sets": 3, "reps": "10 each leg", "description": "Hold dumbbells at your sides and step forward into alternating lunges."},
+      {"name": "Dumbbell Romanian Deadlift", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "With soft knees, push your hips back and lower the dumbbells along your legs."},
+      {"name": "Barbell Back Squat", "equipment": "Barbell", "sets": 4, "reps": "8", "description": "With the bar on your upper back, squat until your thighs are parallel to the floor."},
+      {"name": "Barbell Hip Thrust", "equipment": "Barbell", "sets": 3, "reps": "10", "description": "With your upper back on a bench, drive the bar up with your hips and squeeze your glutes."},
+      {"name": "Bodyweight Squat", "equipment": "Body Weight", "sets": 3, "reps": "20", "description": "Squat down with your chest up and weight in your heels, then stand tall."},
+      {"name": "Bulgarian Split Squat", "equipment": "Body Weight", "sets": 3, "reps": "10 each leg", "description": "Rest your back foot on a bench and lower your back knee toward the floor."},
+      {"name": "Kettlebell Goblet Squat", "equipment": "Kettlebell", "sets": 3, "reps": "12", "description": "Hold the kettlebell at your chest and squat between your knees."},
+      {"name": "Kettlebell Deadlift", "equipment": "Kettlebell", "sets": 3, "reps": "12", "description": "Hinge to grab the kettlebell between your feet and stand up tall."}
+    ]
+  },
+  "biceps": {
+    "name": "Biceps",
+    "description": "Front of the upper arm, used for pulling and curling.",
+    "exercises": [
+      {"name": "Dumbbell Curl", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "Keep your elbows at your sides and curl the dumbbells to your shoulders."},
+      {"name": "Hammer Curl", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "Curl with your palms facing each other to work the biceps and forearms."},
+      {"name": "Barbell Curl", "equipment": "Barbell", "sets": 3, "reps": "10", "description": "Curl the bar with an underhand grip without swinging your body."},
+      {"name": "Barbell Reverse Curl", "equipment": "Barbell", "sets": 3, "reps": "12", "description": "Curl the bar with an overhand grip to build the forearms and brachialis."},
+      {"name": "Chin-Up", "equipment": "Body Weight", "sets": 3, "reps": "8", "description": "Hang with an underhand, shoulder-width grip and pull your chin over the bar."},
+      {"name": "Isometric Towel Curl", "equipment": "Body Weight", "sets": 3, "reps": "30 sec", "description": "Stand on a towel and curl the ends upward as hard as you can without moving."},
+      {"name": "Kettlebell Curl", "equipment": "Kettlebell", "sets": 3, "reps": "12", "description": "Hold the kettlebell by the handle and curl it to your chest."},
+      {"name": "Kettlebell Hammer Curl", "equipment": "Kettlebell", "sets": 3, "reps": "10 each arm", "description": "Hold the kettlebell handle with a neutral grip and curl one arm at a time."}
+    ]
+  },
+  "triceps": {
+    "name": "Triceps",
+    "description": "Back of the upper arm, used for pressing and straightening the elbow.",
+    "exercises": [
+      {"name": "Overhead Dumbbell Extension", "equipment": "Dumbbell", "sets": 3, "reps": "12", "description": "Hold one dumbbell overhead with both hands and lower it behind your head."},
+      {"name": "Dumbbell Kickback", "equipment": "Dumbbell", "sets": 3, "reps": "12 each arm", "description": "Hinge forward and straighten your arm behind you, keeping the elbow still."},
+      {"name": "Close-Grip Bench Press", "equipment": "Barbell", "sets": 4, "reps": "8", "description": "Bench press with your hands shoulder-width apart and elbows tucked."},
+      {"name": "Barbell Skull Crusher", "equipment": "Barbell", "sets": 3, "reps": "10", "description": "Lying on a bench, bend only at the elbows to lower the bar toward your forehead."},
+      {"name": "Bench Dip", "equipment": "Body Weight", "sets": 3, "reps": "15", "description": "With your hands on a bench behind you, bend your elbows to lower your hips."},
+      {"name": "Diamond Push-Up", "equipment": "Body Weight", "sets": 3, "reps": "12", "description": "Do a push-up with your hands together under your chest forming a diamond."},
+      {"name": "Kettlebell Overhead Extension", "equipment": "Kettlebell", "sets": 3, "reps": "12", "description": "Hold the kettlebell by the horns overhead and lower it behind your head."},
+      {"name": "Kettlebell Close-Grip Floor Press", "equipment": "Kettlebell", "sets": 3, "reps": "10", "description": "On the floor, press one kettlebell held by the horns with elbows tucked in."}
+    ]
+  },
+  "abdominals": {
+    "name": "Abdominals",
+    "description": "Core muscles that stabilize your spine in every lift.",
+    "exercises": [
+      {"name": "Dumbbell Russian Twist", "equipment": "Dumbbell", "sets": 3, "reps": "20", "description": "Sit leaning back with feet raised and rotate a dumbbell side to side."},
+      {"name": "Dumbbell Side Bend", "equipment": "Dumbbell", "sets": 3, "reps": "15 each side", "description": "Hold a dumbbell in one hand and bend sideways, then return upright."},
+      {"name": "Barbell Rollout", "equipment": "Barbell", "sets": 3, "reps": "10", "description": "From your knees, roll a loaded barbell forward and pull it back with your abs."},
+      {"name": "Landmine Rotation", "equipment": "Barbell", "sets": 3, "reps": "10 each side", "description": "With one end of the bar anchored, rotate the other end from hip to hip."},
+      {"name": "Plank", "equipment": "Body Weight", "sets": 3, "reps": "45 sec", "description": "Hold a straight line from head to heels on your forearms and toes."},
+      {"name": "Hanging Leg Raise", "equipment": "Body Weight", "sets": 3, "reps": "10", "description": "Hang from a bar and raise your legs without swinging."},
+      {"name": "Bicycle Crunch", "equipment": "Body Weight", "sets": 3, "reps": "20", "description": "Bring opposite elbow to opposite knee while pedaling your legs."},
+      {"name": "Kettlebell Turkish Get-Up", "equipment": "Kettlebell", "sets": 3, "reps": "3 each side", "description": "Hold a kettlebell overhead and move from lying down to standing, then reverse."},
+      {"name": "Kettlebell Windmill", "equipment": "Kettlebell", "sets": 3, "reps": "8 each side", "description": "With the bell overhead, hinge sideways and reach your free hand toward your foot."}
+    ]
+  },
+  "shoulders": {
+    "name": "Shoulders",
+    "description": "Deltoids for overhead strength and healthy shoulder joints.",
+    "exercises": [
+      {"name": "Dumbbell Shoulder Press", "equipment": "Dumbbell", "sets": 4, "reps": "10", "description": "Seated or standing, press two dumbbells from your shoulders to overhead."},
+      {"name": "Dumbbell Lateral Raise", "equipment": "Dumbbell", "sets": 3, "reps": "15", "description": "Raise the dumbbells out to your sides until they reach shoulder height."},
+      {"name": "Barbell Overhead Press", "equipment": "Barbell", "sets": 4, "reps": "8", "description": "Standing, press the bar from your collarbone to straight overhead."},
+      {"name": "Barbell Upright Row", "equipment": "Barbell", "sets": 3, "reps": "12", "description": "Pull the bar up along your body to chest height, leading with your elbows."},
+      {"name": "Pike Push-Up", "equipment": "Body Weight", "sets": 3, "reps": "10", "description": "With your hips high in an upside-down V, lower your head toward the floor."},
+      {"name": "Wall Walk", "equipment": "Body Weight", "sets": 3, "reps": "5", "description": "From a push-up position, walk your feet up a wall and your hands toward it."},
+      {"name": "Kettlebell Halo", "equipment": "Kettlebell", "sets": 3, "reps": "10 each direction", "description": "Hold the kettlebell upside down and circle it slowly around your head."},
+      {"name": "Kettlebell Bottoms-Up Press", "equipment": "Kettlebell", "sets": 3, "reps": "8 each side", "description": "Press a kettlebell held upside down, keeping it balanced the whole way."}
+    ]
+  }
+}
